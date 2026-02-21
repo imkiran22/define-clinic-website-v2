@@ -1,0 +1,41 @@
+.wrapper {
+  padding: 0.6rem 0 var(--section-space);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.95rem;
+}
+
+.card {
+  background: linear-gradient(160deg, #fbf7ff 0%, #f0e5fa 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.05rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 240ms var(--ease-soft), box-shadow 240ms var(--ease-soft);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-strong);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.26rem;
+  color: var(--brand-deep);
+}
+
+.card p {
+  margin: 0.68rem 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

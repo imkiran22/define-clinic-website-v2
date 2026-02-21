@@ -12,6 +12,9 @@
   --shadow-soft: 0 12px 30px rgba(62, 40, 88, 0.14);
   --shadow-strong: 0 24px 48px rgba(52, 28, 78, 0.22);
   --radius: 18px;
+  --section-space: clamp(2.2rem, 4vw, 3.4rem);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --font-serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Garamond, serif;
   --font-sans: 'Optima', 'Candara', 'Trebuchet MS', sans-serif;
 }
@@ -29,6 +32,8 @@ body {
 body {
   color: var(--text);
   font-family: var(--font-sans);
+  line-height: 1.58;
+  text-rendering: optimizeLegibility;
   background:
     radial-gradient(circle at 12% 6%, rgba(195, 164, 223, 0.25), transparent 26%),
     radial-gradient(circle at 88% 14%, rgba(139, 94, 178, 0.18), transparent 28%),
@@ -67,6 +72,7 @@ h2,
 h3 {
   font-family: var(--font-serif);
   letter-spacing: 0.01em;
+  text-wrap: balance;
 }
 
 .eyebrow {
@@ -93,8 +99,8 @@ h3 {
 .sectionTitleWrap h2,
 .pageHero h1 {
   margin: 0.4rem 0 0;
-  line-height: 1.1;
-  font-size: clamp(2rem, 2.8vw, 3rem);
+  line-height: 1.07;
+  font-size: clamp(2.05rem, 2.9vw, 3.1rem);
 }
 
 .pageHero {
@@ -114,8 +120,17 @@ h3 {
 .pageHero p {
   color: var(--muted);
   max-width: 68ch;
-  line-height: 1.75;
+  line-height: 1.8;
   font-size: 1.02rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .pageHeroAppointment::before {
@@ -128,10 +143,34 @@ h3 {
 
 @media (max-width: 900px) {
   .pageHero {
-    padding-top: 6.3rem;
+    padding: 5.5rem 0 1.9rem;
   }
 
   .pageHero::before {
     height: 180px;
+  }
+
+  main {
+    padding-bottom: 5.3rem;
+  }
+
+  .sectionTitleWrap {
+    margin-bottom: 1.1rem;
+  }
+
+  .sectionTitleWrap h2,
+  .pageHero h1 {
+    font-size: clamp(1.55rem, 7.2vw, 2.1rem);
+    line-height: 1.14;
+  }
+
+  .pageHero p {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+
+  .eyebrow {
+    font-size: 0.69rem;
+    letter-spacing: 0.11em;
   }
 }

@@ -4,7 +4,7 @@
   min-height: 72vh;
   display: grid;
   place-items: center;
-  margin: 1rem auto 2.5rem;
+  margin: 1rem auto var(--section-space);
   width: min(1140px, 94vw);
   border: 1px solid var(--line);
   border-radius: 28px;
@@ -22,36 +22,37 @@
 
 .content {
   width: min(1040px, 90vw);
-  padding: 3.4rem 0;
-  animation: fade-up 0.75s ease both;
+  padding: 3.55rem 0;
+  animation: fade-up 680ms var(--ease-out) both;
 }
 
 .kicker {
   margin: 0;
   color: var(--brand-deep);
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
 }
 
 .content h1 {
-  font-size: clamp(2.4rem, 5.4vw, 4.3rem);
-  margin: 0.7rem 0 0.8rem;
-  max-width: 12ch;
+  font-size: clamp(2.45rem, 5.5vw, 4.45rem);
+  margin: 0.72rem 0 0.85rem;
+  max-width: 11.5ch;
+  line-height: 1.01;
   color: #2b1e3a;
 }
 
 .content > p {
   margin: 0;
-  color: #504262;
+  color: #4f4260;
   font-size: 1.08rem;
   max-width: 52ch;
-  line-height: 1.75;
+  line-height: 1.82;
 }
 
 .actions {
-  margin-top: 1.7rem;
+  margin-top: 1.75rem;
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
@@ -59,10 +60,10 @@
 
 .primary,
 .secondary {
-  padding: 0.78rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 999px;
   font-weight: 700;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 240ms var(--ease-soft), box-shadow 260ms var(--ease-soft);
 }
 
 .primary {
@@ -89,7 +90,7 @@
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(22px);
+    transform: translateY(18px);
   }
 
   to {
@@ -100,7 +101,7 @@
 
 @media (max-width: 900px) {
   .hero {
-    min-height: 62vh;
+    min-height: 58vh;
     background-position: 74% center;
     border-radius: 22px;
   }
@@ -110,10 +111,32 @@
   }
 
   .content {
-    padding: 2.6rem 0;
+    padding: 2.15rem 0;
   }
 
   .content h1 {
     max-width: 14ch;
+    font-size: clamp(1.85rem, 8.2vw, 2.55rem);
+    margin: 0.58rem 0 0.7rem;
+  }
+
+  .content > p {
+    font-size: 0.96rem;
+    line-height: 1.62;
+  }
+
+  .kicker {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
+
+  .actions {
+    margin-top: 1.15rem;
+  }
+
+  .primary,
+  .secondary {
+    padding: 0.7rem 1rem;
+    font-size: 0.92rem;
   }
 }

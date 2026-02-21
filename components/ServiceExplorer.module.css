@@ -1,0 +1,45 @@
+.wrapper {
+  padding: 0.15rem 0 0.6rem;
+}
+
+.concernPanel {
+  background: linear-gradient(140deg, #f8f2ff 0%, #efe3fb 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.15rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.concernPanel h2 {
+  margin: 0.5rem 0 0;
+  font-size: clamp(1.7rem, 2.2vw, 2.3rem);
+  line-height: 1.1;
+}
+
+.chips {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.chip {
+  border: 1px solid var(--line-strong);
+  background: #fff;
+  color: #4a3a5d;
+  border-radius: 999px;
+  padding: 0.58rem 0.94rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 220ms var(--ease-soft), border-color 220ms var(--ease-soft), background-color 220ms var(--ease-soft);
+}
+
+.chip:hover {
+  transform: translateY(-1px);
+}
+
+.chipActive {
+  border-color: var(--brand);
+  background: #eddffd;
+  color: var(--brand-deep);
+}

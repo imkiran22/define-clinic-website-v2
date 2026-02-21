@@ -1,0 +1,42 @@
+.wrapper {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 0.6rem;
+    background: rgba(250, 244, 255, 0.97);
+    border-top: 1px solid var(--line);
+    backdrop-filter: blur(6px);
+  }
+
+  .primary,
+  .secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 0.72rem 0.75rem;
+    font-weight: 800;
+    font-size: 0.92rem;
+  }
+
+  .primary {
+    color: #fff;
+    background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+  }
+
+  .secondary {
+    border: 1px solid var(--line-strong);
+    background: #fff;
+    color: var(--brand-deep);
+  }
+}

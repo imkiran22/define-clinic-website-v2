@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 1.2rem 0 2.6rem;
+  padding: 1.3rem 0 var(--section-space);
 }
 
 .grid {
@@ -8,13 +8,23 @@
   gap: 1.2rem;
 }
 
+.cardLink {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 250ms var(--ease-soft), box-shadow 250ms var(--ease-soft);
 }
 
 .card:hover {
@@ -35,12 +45,19 @@
 
 .content h3 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.42rem;
 }
 
 .content p {
   color: var(--muted);
-  line-height: 1.68;
+  line-height: 1.7;
+}
+
+.cardHint {
+  margin: 0.38rem 0 0;
+  color: var(--brand-deep);
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 
 .content ul {
@@ -49,6 +66,7 @@
   list-style: none;
   display: grid;
   gap: 0.55rem;
+  animation: reveal-list 280ms var(--ease-out);
 }
 
 .content li {
@@ -69,6 +87,18 @@
   font-weight: 800;
   color: var(--brand-deep);
   transform: translateY(-50%);
+}
+
+@keyframes reveal-list {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 900px) {

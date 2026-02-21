@@ -97,6 +97,10 @@ export const treatmentCategories: TreatmentCategory[] = [
 
 export const doctors: DoctorProfile[] = [
   {
+    name: 'Dr B Saranya',
+    role: 'Founder | MBBS | MD (DVL) Resident'
+  },
+  {
     name: 'Dr Selva Bharathi',
     role: 'Consultant'
   },
