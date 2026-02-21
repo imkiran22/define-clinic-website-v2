@@ -1,0 +1,119 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 72vh;
+  display: grid;
+  place-items: center;
+  margin: 1rem auto 2.5rem;
+  width: min(1140px, 94vw);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  overflow: hidden;
+  background: url('/appointment-girl.jpeg') center right / cover no-repeat;
+  box-shadow: var(--shadow-strong);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(94deg, rgba(246, 240, 251, 0.94) 30%, rgba(246, 240, 251, 0.16) 100%);
+}
+
+.content {
+  width: min(1040px, 90vw);
+  padding: 3.4rem 0;
+  animation: fade-up 0.75s ease both;
+}
+
+.kicker {
+  margin: 0;
+  color: var(--brand-deep);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.content h1 {
+  font-size: clamp(2.4rem, 5.4vw, 4.3rem);
+  margin: 0.7rem 0 0.8rem;
+  max-width: 12ch;
+  color: #2b1e3a;
+}
+
+.content > p {
+  margin: 0;
+  color: #504262;
+  font-size: 1.08rem;
+  max-width: 52ch;
+  line-height: 1.75;
+}
+
+.actions {
+  margin-top: 1.7rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.primary,
+.secondary {
+  padding: 0.78rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(78, 44, 114, 0.3);
+}
+
+.secondary {
+  background: rgba(255, 253, 249, 0.9);
+  border: 1px solid var(--line-strong);
+  color: #3c2f4b;
+}
+
+.primary:hover,
+.secondary:hover {
+  transform: translateY(-2px);
+}
+
+.secondary:hover {
+  box-shadow: var(--shadow-soft);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 62vh;
+    background-position: 74% center;
+    border-radius: 22px;
+  }
+
+  .overlay {
+    background: linear-gradient(92deg, rgba(246, 240, 251, 0.95) 14%, rgba(246, 240, 251, 0.55) 100%);
+  }
+
+  .content {
+    padding: 2.6rem 0;
+  }
+
+  .content h1 {
+    max-width: 14ch;
+  }
+}

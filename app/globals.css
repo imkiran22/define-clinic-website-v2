@@ -1,0 +1,137 @@
+:root {
+  --bg: #f6f0fb;
+  --surface: #fffcff;
+  --surface-alt: #efe6f6;
+  --text: #231a2c;
+  --muted: #63576f;
+  --brand: #8b5eb2;
+  --brand-deep: #5e3d80;
+  --accent: #c3a4df;
+  --line: #dbcbea;
+  --line-strong: #bca3d5;
+  --shadow-soft: 0 12px 30px rgba(62, 40, 88, 0.14);
+  --shadow-strong: 0 24px 48px rgba(52, 28, 78, 0.22);
+  --radius: 18px;
+  --font-serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Garamond, serif;
+  --font-sans: 'Optima', 'Candara', 'Trebuchet MS', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: var(--text);
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at 12% 6%, rgba(195, 164, 223, 0.25), transparent 26%),
+    radial-gradient(circle at 88% 14%, rgba(139, 94, 178, 0.18), transparent 28%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(94, 61, 128, 0.04) 0,
+      rgba(94, 61, 128, 0.04) 1px,
+      transparent 1px,
+      transparent 22px
+    ),
+    var(--bg);
+}
+
+::selection {
+  color: #fff;
+  background: var(--brand);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  min-height: calc(100vh - 160px);
+  padding-bottom: 1.8rem;
+}
+
+.container {
+  width: min(1140px, 92vw);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  letter-spacing: 0.01em;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-deep);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.eyebrow::after {
+  content: '';
+  width: 40px;
+  border-top: 1px solid var(--line-strong);
+}
+
+.sectionTitleWrap {
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitleWrap h2,
+.pageHero h1 {
+  margin: 0.4rem 0 0;
+  line-height: 1.1;
+  font-size: clamp(2rem, 2.8vw, 3rem);
+}
+
+.pageHero {
+  position: relative;
+  padding: 7.3rem 0 2.5rem;
+}
+
+.pageHero::before {
+  content: '';
+  position: absolute;
+  inset: 5rem 0 auto;
+  height: 220px;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(188, 163, 213, 0.32) 0%, transparent 100%);
+}
+
+.pageHero p {
+  color: var(--muted);
+  max-width: 68ch;
+  line-height: 1.75;
+  font-size: 1.02rem;
+}
+
+.pageHeroAppointment::before {
+  background: linear-gradient(180deg, rgba(139, 94, 178, 0.22) 0%, transparent 100%);
+}
+
+.pageHeroContact::before {
+  background: linear-gradient(180deg, rgba(195, 164, 223, 0.28) 0%, transparent 100%);
+}
+
+@media (max-width: 900px) {
+  .pageHero {
+    padding-top: 6.3rem;
+  }
+
+  .pageHero::before {
+    height: 180px;
+  }
+}

@@ -1,0 +1,82 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(247, 241, 233, 0.88);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.inner {
+  width: min(1140px, 92vw);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 82px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  letter-spacing: 0.01em;
+}
+
+.logo :global(img) {
+  border-radius: 50%;
+  border: 2px solid var(--line-strong);
+  box-shadow: 0 8px 20px rgba(76, 45, 110, 0.18);
+}
+
+.logo span {
+  color: var(--brand-deep);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  font-weight: 600;
+  color: #3b2f49;
+}
+
+.menu a:hover {
+  color: var(--brand-deep);
+  background: #efe4fa;
+  transform: translateY(-1px);
+}
+
+.menu li:last-child a {
+  background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(78, 44, 114, 0.34);
+}
+
+.menu li:last-child a:hover {
+  background: linear-gradient(135deg, #9a6cc2, #694590);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.78rem 0;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+  }
+}

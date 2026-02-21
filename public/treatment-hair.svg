@@ -1,0 +1,19 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0E6FA"/>
+      <stop offset="1" stop-color="#DCC7F2"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="250" y1="120" x2="930" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5EB2"/>
+      <stop offset="1" stop-color="#5E3D80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <circle cx="1015" cy="145" r="105" fill="#E9D9FA"/>
+  <path d="M262 556C339 469 412 421 503 404C587 388 660 413 715 465C759 506 783 553 796 601" stroke="url(#wave)" stroke-width="18" stroke-linecap="round"/>
+  <path d="M290 612C360 536 430 496 512 482C578 471 638 484 686 521C728 553 755 596 770 640" stroke="url(#wave)" stroke-opacity="0.72" stroke-width="14" stroke-linecap="round"/>
+  <path d="M342 357C357 323 398 300 447 301C506 302 558 339 560 400C563 465 513 510 457 509C405 508 362 470 355 430" stroke="#5E3D80" stroke-width="12" stroke-linecap="round"/>
+  <text x="90" y="116" fill="#5E3D80" font-size="46" font-family="Georgia, serif" font-weight="700">Hair Treatments</text>
+  <text x="92" y="162" fill="#6B5682" font-size="24" font-family="Verdana, sans-serif">Healthy scalp. Stronger strands.</text>
+</svg>
