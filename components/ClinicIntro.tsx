@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { aboutCopy, consultingHours, clinicInfo } from '@/content/clinic';
 import styles from './ClinicIntro.module.css';
 
@@ -7,15 +6,6 @@ export default function ClinicIntro() {
     <section className={styles.wrapper}>
       <div className="container">
         <div className={styles.grid}>
-          <div className={styles.profile}>
-            <Image
-              src="/doctor-saranya.jpg"
-              alt="Doctor at Define Clinic"
-              width={520}
-              height={620}
-              className={styles.image}
-            />
-          </div>
           <div className={styles.content}>
             <p className="eyebrow">About Define</p>
             <h2>Trusted Aesthetic Care in Avadi</h2>

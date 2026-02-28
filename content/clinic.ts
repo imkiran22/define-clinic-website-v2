@@ -101,7 +101,7 @@ export const doctors: DoctorProfile[] = [
     role: 'Founder | MBBS | MD (DVL) Resident'
   },
   {
-    name: 'Dr Selva Bharathi',
+    name: 'Dr Selva Baarathi',
     role: 'Consultant'
   },
   {
