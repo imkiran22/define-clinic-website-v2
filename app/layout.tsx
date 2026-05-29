@@ -3,6 +3,7 @@ import './globals.css';
 import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
 import MobileBookingBar from '@/components/MobileBookingBar';
+import RelocationBanner from '@/components/RelocationBanner';
 import { clinicInfo } from '@/content/clinic';
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
+        <RelocationBanner />
         <SiteHeader />
         {children}
         <SiteFooter />

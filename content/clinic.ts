@@ -28,6 +28,14 @@ export const clinicInfo = {
   facebook: 'https://www.facebook.com/defineskinhairclinic-112627771411004'
 };
 
+export const relocation = {
+  active: true,
+  timing: 'From June 8, 2026',
+  newAddress: 'No. 617, MIG, TNHB, Avadi, Opp. EB Sub-Station, Chennai – 600054',
+  directionsUrl: 'https://maps.google.com/?q=13.111409,80.104652',
+  dismissKey: 'define-relocation-banner-dismissed-v1'
+};
+
 export const consultingHours = [
   { day: 'Monday - Friday', time: '10:00 AM - 7:00 PM' },
   { day: 'Saturday', time: '10:00 AM - 7:00 PM' },
