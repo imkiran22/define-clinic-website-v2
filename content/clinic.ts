@@ -16,24 +16,22 @@ export const clinicInfo = {
   name: 'Define Skin, Hair & Laser Clinic',
   tagline: 'Personalized skin, hair, and laser care designed for confidence.',
   foundedYear: '2022',
-  address:
-    'No. 2/89, Poonamallee - Avadi High Rd, Ram Nagar, Township Area, TNHB Mig V Block, Avadi, Tamil Nadu 600054',
+  address: 'No. 617, MIG, TNHB, Avadi, Opp. EB Sub-Station, Chennai – 600054',
   phoneDisplay: '+91 63792 56207',
   phoneDial: '+916379256207',
   email: 'define.skinhair.clinic@gmail.com',
   whatsapp: 'https://wa.me/916379256207?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment.',
-  mapEmbed:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.850344624979!2d80.10620691513428!3d13.108665590766073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52636845264889%3A0xb72239b67cb38c34!2sDefine%20skin%20hair%20%26%20laser%20clinic!5e0!3m2!1sen!2sin!4v1663738471657!5m2!1sen!2sin',
+  mapEmbed: 'https://maps.google.com/maps?q=13.111409,80.104652&z=16&output=embed',
   instagram: 'https://www.instagram.com/define.cosmeticclinic',
   facebook: 'https://www.facebook.com/defineskinhairclinic-112627771411004'
 };
 
 export const relocation = {
   active: true,
-  timing: 'From June 8, 2026',
-  newAddress: 'No. 617, MIG, TNHB, Avadi, Opp. EB Sub-Station, Chennai – 600054',
+  headline: 'We’ve moved!',
+  timing: 'As of June 8, 2026',
   directionsUrl: 'https://maps.google.com/?q=13.111409,80.104652',
-  dismissKey: 'define-relocation-banner-dismissed-v1'
+  dismissKey: 'define-relocation-banner-dismissed-v2'
 };
 
 export const consultingHours = [

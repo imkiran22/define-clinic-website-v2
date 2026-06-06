@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import styles from './RelocationBanner.module.css';
-import { relocation } from '@/content/clinic';
+import { clinicInfo, relocation } from '@/content/clinic';
 
 export default function RelocationBanner() {
   const [hydrated, setHydrated] = useState(false);
@@ -42,9 +42,9 @@ export default function RelocationBanner() {
     >
       <div className={styles.inner}>
         <p className={styles.message}>
-          <strong>We&rsquo;re moving!</strong>
-          <span className={styles.timing}>{relocation.timing}</span>, find us at our new address:{' '}
-          <span className={styles.address}>{relocation.newAddress}</span>
+          <strong>{relocation.headline}</strong>
+          <span className={styles.timing}>{relocation.timing}</span>, our new address is:{' '}
+          <span className={styles.address}>{clinicInfo.address}</span>
         </p>
         <a
           className={styles.cta}
