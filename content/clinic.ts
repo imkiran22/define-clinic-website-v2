@@ -109,9 +109,5 @@ export const doctors: DoctorProfile[] = [
   {
     name: 'Dr Selva Baarathi',
     role: 'Consultant'
-  },
-  {
-    name: 'Dr Sneka',
-    role: 'Consultant'
   }
 ];
